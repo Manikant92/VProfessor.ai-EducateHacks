@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="text-center">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>VProfessor.ai - A Virtual Professor</title>
+    <link rel="stylesheet" href="/assetsapplication/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assetsapplication/css/Inter.css">
+    <link rel="stylesheet" href="/assetsapplication/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/assetsapplication/css/Footer-Dark.css">
+    <link rel="stylesheet" href="/assetsapplication/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="/assetsapplication/css/styles.css">
+</head>
+
+<body class="text-left">
+    <nav
+        class="navbar navbar-light navbar-expand-md shadow flex-grow-1 justify-content-between navigation-clean-search">
+        <div class="container"><img class="img-fluid" src="/assetsapplication/img/professorailogonocolorBLACK.png"
+                width="12%"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span
+                    class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav flex-grow-1 justify-content-start">
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="navitem" href="index"
+                            style="color: rgb(14, 59, 194);">Home</a></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" id="navitem" href="about"
+                            style="color: rgb(14, 59, 194);">About Us</a></li>
+                </ul><a class="btn btn-primary border rounded action-button" role="button" href="ask"
+                    style="filter: brightness(100%) saturate(100%);">Ask The Professor</a>
+            </div>
+            </ul><a class="btn btn-primary border rounded action-button" role="button" href="application"
+                style="filter: brightness(100%) saturate(100%);">Get Notes</a>
+        </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <div class="row" id="doublemargin">
+                <div class="col">
+                    <div>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">WAV</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2">MP3</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab"
+                                    href="#tab-7">Plaintext</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane text-center" role="tabpanel" id="tab-1">
+                                <h1 class="small-margin" style="margin-bottom: 1rem;">Please upload a .wav audio file
+                                    below</h1>
+                                <form method="POST" action="/uploadMP4" enctype="multipart/form-data"
+                                    target="transcript-text">
+                                    <input type="file" id="mp4" name="mp4" class="form-margin"
+                                        style="font-family: 'Inter';">
+                                    <input class="btn btn-primary" type="submit"
+                                        style="font-family: 'Inter';margin-left: 1rem;" value="Upload">
+                                </form>
+                                <p style="margin-top: 1rem;">Note: Larger files may take longer to analyze</p>
+                            </div>
+                            <div class="tab-pane text-center" role="tabpanel" id="tab-2">
+                                <h1 class="small-margin" style="margin-bottom: 1rem;">Please upload a .mp3 audio file
+                                    below</h1>
+                                <form method="POST" action="/uploadMP3" enctype="multipart/form-data"
+                                    target="transcript-text">
+                                    <input type="file" id="mp3" name="mp3" class="form-margin"
+                                        style="font-family: 'Inter';">
+                                    <input class="btn btn-primary" type="submit"
+                                        style="font-family: 'Inter';margin-left: 1rem;" value="Upload">
+                                </form>
+                                <p style="margin-top: 1rem;">Note: Larger files may take longer to analyze</p>
+                            </div>
+                            <div class="tab-pane text-center" role="tabpanel" id="tab-7">
+                                <h1 class="small-margin" style="margin-bottom: 1rem;">Please paste your article in
+                                    plaintext in the area below</h1>
+                                <form method="POST" action="/uploadPlainText"
+                                    enctype="application/x-www-form-urlencoded" target="transcript-text"
+                                    class="form-margin">
+                                    <textarea id="plainText" name="plainText" class="form-control form-margin">
+                                  </textarea>
+                                    <input type="submit" class="btn btn-primary"
+                                        style="font-family: 'Inter';margin-left: 1rem;" value="Submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section></section>
+    <section>
+        <div class="container">
+            <div class="row" id="doublemargin">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Notes</h5>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" id="transcript-text" name="transcript-text">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="doublemargin">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <form id="email" name="email">
+                        <input id="address" name="address" class="form-control" type="email"
+                            style="margin-top: 1rem;margin-bottom: 1rem;">
+                        <input class="btn btn-primary" type="submit" style="font-family: 'Inter';margin-left: 1rem;"
+                            value="Email Your Notes">
+                    </form>
+                </div>
+                <div class="col text-center d-xl-flex justify-content-xl-center align-items-xl-center">
+                    <button id="generatePDF" class="btn btn-primary text-center" type="button"
+                        style="font-family: 'Inter';">Save Results as PDF</button>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <p id="topmargin" style="font-family: 'Inter';">Please be aware that when saving your results, you
+                        must have inputted a valid file above first</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row" id="margintop">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><a href="https://vprofessor.ai">Webpage</a></li>
+                            <li><a href="about">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Open Source</h3>
+                        <ul>
+
+                            <li><a href="https://github.com/Manikant92/vprofessor">GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>VProfessor.ai - A Virtual Professor</h3>
+                        <p>This project was made as apart of Azure Developer League Hackathon @HackerEarth!</p>
+                    </div>
+                    <div class="col item social"><a href="https://vprofessor.ai"><i
+                                class="icon ion-university"></i></a><a
+                            href="https://www.linkedin.com/in/manikantkella/"><i class="icon ion-ios-heart"></i></a><a
+                            href="https://www.linkedin.com/in/manikantkella/"><i class="icon ion-email"></i></a><a
+                            href="https://github.com/Manikant92/vprofessor"><i class="icon ion-social-github"></i></a>
+                    </div>
+                </div>
+                <p class="copyright"><br><strong>© VProfessor.ai</strong><br></p>
+            </div>
+        </footer>
+    </div>
+    <script src="/assetsapplication/js/jquery.min.js"></script>
+    <script src="/assetsapplication/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"
+        integrity="sha512-s/XK4vYVXTGeUSv4bRPOuxSDmDlTedEpMEcAQk0t/FMd9V6ft8iXdwSBxV0eD60c6w/tjotSlKu9J2AAW1ckTA=="
+        crossorigin="anonymous"></script>
+    <script src="/scripts/pdf.js"></script>
+    <script src="/scripts/email.js"></script>
+</body>
+
+</html>
