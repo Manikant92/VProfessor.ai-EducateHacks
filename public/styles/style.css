@@ -1,0 +1,137 @@
+.embed-responsive-item {
+    background:url(loader.gif) center center no-repeat;
+  }
+
+.text {
+    padding: 3% 0%;
+}
+
+#info{
+    background-color: skyblue;
+}
+
+#arrows {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    padding: 1% 8%;
+}
+
+.vidDisplay {
+    padding: 1% 8%;
+}
+
+#yt-transcript-text {
+    padding: 1% 1%;
+    overflow-y: scroll;
+    background-color: rgb(246, 246, 246);
+    height: 300px;
+    width: 100%;
+    border-style: ridge;
+
+}
+
+#file-transcript-text {
+    padding: 1% 1%;
+    overflow-y: scroll;
+    background-color: rgb(246, 246, 246);
+    height: 300px;
+    width: 100%;
+    border-style: ridge;
+
+}
+
+#classification {
+    padding: 1% 0%;
+}
+
+#links {
+    padding: 1% 0%;
+}
+
+#vidDisplay {
+    padding: 1% 0%;
+}
+
+#container-fluid {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 10%;
+}
+
+#pills-tab-nav {
+    display:table;
+    width: 50%;
+    margin: 0;
+}
+
+#pills-tab-nav > li {
+    float:none;
+    display:table-cell;
+    text-align:center;
+}
+
+#youtube-link {
+    width: 50%;
+    margin: 1% 0%;
+}
+
+#search {
+    margin: 1% 0%;
+    width: 50%;
+}
+#ytvid-submit {
+    margin-bottom: 2%;
+}
+#videos {
+    min-height: 300px;
+}
+
+/*          About Us        */
+#pfp1{
+    margin-left: 5%;
+    width: 200px;
+    height: 200px;
+}
+#pfp2{
+    margin-bottom: 10%;
+    margin-left: 5%;
+    width: 200px;
+    height: 200px;
+}
+#pfp3{
+    margin-bottom: 10%;
+    margin-left: 5%;
+    width: 200px;
+    height: 200px;
+}
+#pfp4{
+    margin-bottom: 10%;
+    margin-left: 5%;
+    width: 200px;
+    height: 200px;
+}
+#profile1 {
+    padding-left: 8%;
+    padding-top: 10%;
+    height: 100%;
+}
+#profile2 {
+    padding-left: 5%;
+    padding-top: 10%;
+    height: 100%;
+}
+#profile3 {
+    padding-left: 8%;
+    padding-top: 10%;
+    height: 100%;
+}
+#profile4 {
+    padding-left: 5%;
+    padding-top: 10%;
+    height: 100%;
+}
